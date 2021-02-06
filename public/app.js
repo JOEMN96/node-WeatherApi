@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
     return alert("enterVAlidVAlue");
   }
   sucssMSg.textContent = "Loading ...";
-  fetch(`http://localhost:3000/weather?location=${searchVal}`).then((res) => {
+  fetch(`/weather?location=${searchVal}`).then((res) => {
     res.json().then((data) => {
       if (data.body.error) {
         console.log(data.body.error.info);
